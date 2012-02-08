@@ -1,6 +1,6 @@
 Name:           amap
 Version:        5.2
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        Network tool for application protocol detection
 Group:          Applications/System
 License:        AMAP License
@@ -56,6 +56,9 @@ rm -rf %{buildroot}
 %{_datadir}/%{name}
 
 %changelog
+* Thu Feb 09 2012 Nicolas Chauvet <kwizart@gmail.com> - 5.2-5
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
+
 * Fri Mar 26 2010 Michal Ambroz <rebus at, seznam.cz> 5.2-4
 - more flexible pcre cflags to build also on RHEL4
 

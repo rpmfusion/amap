@@ -1,6 +1,6 @@
 Name:           amap
 Version:        5.2
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        Network tool for application protocol detection
 Group:          Applications/System
 License:        AMAP License
@@ -56,6 +56,9 @@ rm -rf %{buildroot}
 %{_datadir}/%{name}
 
 %changelog
+* Wed Nov 21 2012 Nicolas Chauvet <kwizart@gmail.com> - 5.2-6
+- Rebuilt
+
 * Thu Feb 09 2012 Nicolas Chauvet <kwizart@gmail.com> - 5.2-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
 

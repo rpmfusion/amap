@@ -1,6 +1,6 @@
 Name:           amap
 Version:        5.4
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Network tool for application protocol detection
 Group:          Applications/System
 License:        AMAP License
@@ -56,7 +56,7 @@ rm -rf %{buildroot}
 %{_datadir}/%{name}
 
 %changelog
-* Fri May 23 2014 Michal Ambroz <rebus at, seznam.cz> 5.4-1
+* Fri May 23 2014 Michal Ambroz <rebus at, seznam.cz> 5.4-2
 - bump to version 5.4
 
 * Wed Nov 21 2012 Nicolas Chauvet <kwizart@gmail.com> - 5.2-6

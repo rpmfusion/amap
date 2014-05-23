@@ -1,6 +1,6 @@
 Name:           amap
-Version:        5.2
-Release:        6%{?dist}
+Version:        5.4
+Release:        1%{?dist}
 Summary:        Network tool for application protocol detection
 Group:          Applications/System
 License:        AMAP License
@@ -30,7 +30,7 @@ on the TCP/UDP port they are being bound to.
 %patch0 -p1 -b .0destdir
 %patch1 -p1 -b .1path
 %patch2 -p1 -b .2ldflags
-%patch3 -p1 -b .3homepage
+#%patch3 -p1 -b .3homepage
 %patch4 -p1 -b .4pcre
 %patch5 -p1 -b .5optflags
 %patch6 -p1 -b .6lnamap6
@@ -56,6 +56,9 @@ rm -rf %{buildroot}
 %{_datadir}/%{name}
 
 %changelog
+* Fri May 23 2014 Michal Ambroz <rebus at, seznam.cz> 5.4-1
+- bump to version 5.4
+
 * Wed Nov 21 2012 Nicolas Chauvet <kwizart@gmail.com> - 5.2-6
 - Rebuilt
 

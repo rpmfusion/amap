@@ -17,6 +17,7 @@ Patch6:         %{name}-lnamap6.patch
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
+BuildRequires:  gcc
 BuildRequires:  openssl-devel
 BuildRequires:  pcre-devel
 

@@ -1,6 +1,6 @@
 Name:           amap
 Version:        5.4
-Release:        9%{?dist}
+Release:        10%{?dist}
 Summary:        Network tool for application protocol detection
 Group:          Applications/System
 License:        AMAP License
@@ -57,6 +57,9 @@ rm -rf %{buildroot}
 %{_datadir}/%{name}
 
 %changelog
+* Sat Aug 10 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 5.4-10
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
+
 * Tue Mar 05 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 5.4-9
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_30_Mass_Rebuild
 

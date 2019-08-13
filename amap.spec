@@ -1,8 +1,7 @@
 Name:           amap
 Version:        5.4
-Release:        10%{?dist}
+Release:        11%{?dist}
 Summary:        Network tool for application protocol detection
-Group:          Applications/System
 License:        AMAP License
 #License        AMAP non-commercial rules added to GPLv2
 URL:            http://freeworld.thc.org/thc-amap/
@@ -14,8 +13,7 @@ Patch3:         %{name}-new-homepage.patch
 Patch4:         %{name}-system-pcre.patch
 Patch5:         %{name}-optflags.patch
 Patch6:         %{name}-lnamap6.patch
-
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+Patch7:         %{name}-openssl.patch
 
 BuildRequires:  gcc
 BuildRequires:  openssl-devel
@@ -35,28 +33,34 @@ on the TCP/UDP port they are being bound to.
 %patch4 -p1 -b .4pcre
 %patch5 -p1 -b .5optflags
 %patch6 -p1 -b .6lnamap6
+%patch7 -p1 -b .openssl
 
 %build
 #%%configure
 ./configure --prefix=%{_prefix} --libdir=%{_libdir}
-OPT="$RPM_OPT_FLAGS" make %{?_smp_mflags}
+%{make_build} OPT="$RPM_OPT_FLAGS" 
 
 
 %install
-rm -rf %{buildroot}
-make install DESTDIR=%{buildroot}
-
-%clean
-rm -rf %{buildroot}
+%{make_install}
 
 %files
-%defattr(644,root,root,755)
-%doc CHANGES README TODO LICENCE.AMAP LICENSE.GNU
-%attr(755,root,root) %{_bindir}/*
+%doc CHANGES README TODO
+%license LICENCE.AMAP LICENSE.GNU
+%{_bindir}/*
 %{_mandir}/man1/%{name}.1*
-%{_datadir}/%{name}
+%{_datadir}/%{name}/
 
 %changelog
+* Tue Aug 13 2019 Leigh Scott <leigh123linux@gmail.com> - 5.4-11
+- Fix openssl not found on x86_64
+- Remove BuildRoot tag
+- Remove Group tag
+- Remove clean section
+- Remove defattr from files
+- Spec file clean up
+- Install license file correctly
+
 * Sat Aug 10 2019 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 5.4-10
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_31_Mass_Rebuild
 

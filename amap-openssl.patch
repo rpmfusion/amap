@@ -1,0 +1,12 @@
+--- a/configure
++++ b/configure
+@@ -33,7 +33,7 @@
+ echo
+ 
+ echo "Checking for openssl ..."
+-for i in  $LIBDIRS /lib  /usr/lib /usr/local/lib /opt/local/lib \
++for i in  $LIBDIRS /lib  /usr/lib /usr/lib64 /usr/local/lib /opt/local/lib \
+ /*ssl /usr/*ssl /opt/*ssl /usr/local/*ssl /opt/local/*ssl \
+ /*ssl/lib /usr/*ssl/lib /opt/*ssl/lib /usr/local/*ssl/lib /opt/local/*ssl/lib .
+ do
+

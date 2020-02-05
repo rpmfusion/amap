@@ -1,6 +1,6 @@
 Name:           amap
 Version:        5.4
-Release:        11%{?dist}
+Release:        12%{?dist}
 Summary:        Network tool for application protocol detection
 License:        AMAP License
 #License        AMAP non-commercial rules added to GPLv2
@@ -52,6 +52,9 @@ on the TCP/UDP port they are being bound to.
 %{_datadir}/%{name}/
 
 %changelog
+* Wed Feb 05 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 5.4-12
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_32_Mass_Rebuild
+
 * Tue Aug 13 2019 Leigh Scott <leigh123linux@gmail.com> - 5.4-11
 - Fix openssl not found on x86_64
 - Remove BuildRoot tag

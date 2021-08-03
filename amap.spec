@@ -1,6 +1,6 @@
 Name:           amap
 Version:        5.4
-Release:        14%{?dist}
+Release:        15%{?dist}
 Summary:        Network tool for application protocol detection
 License:        AMAP License
 #License        AMAP non-commercial rules added to GPLv2
@@ -52,6 +52,9 @@ on the TCP/UDP port they are being bound to.
 %{_datadir}/%{name}/
 
 %changelog
+* Tue Aug 03 2021 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 5.4-15
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_35_Mass_Rebuild
+
 * Thu Feb 04 2021 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 5.4-14
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
 

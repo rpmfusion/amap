@@ -4,8 +4,8 @@ Release:        17%{?dist}
 Summary:        Network tool for application protocol detection
 License:        AMAP License
 #License        AMAP non-commercial rules added to GPLv2
-URL:            http://freeworld.thc.org/thc-amap/
-Source0:        http://freeworld.thc.org/releases/%{name}-%{version}.tar.gz
+URL:            https://github.com/hackerschoice/THC-Archive
+Source0:        https://github.com/hackerschoice/THC-Archive/raw/master/Tools/%{name}-%{version}.tar.gz
 Patch0:         %{name}-destdir.patch
 Patch1:         %{name}-path.patch
 Patch2:         %{name}-ldflags.patch
@@ -38,7 +38,7 @@ on the TCP/UDP port they are being bound to.
 %build
 #%%configure
 ./configure --prefix=%{_prefix} --libdir=%{_libdir}
-%{make_build} OPT="$RPM_OPT_FLAGS" 
+%{make_build} OPT="$RPM_OPT_FLAGS"
 
 
 %install

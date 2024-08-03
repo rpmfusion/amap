@@ -26,14 +26,14 @@ on the TCP/UDP port they are being bound to.
 
 %prep
 %setup -q
-%patch0 -p1 -b .0destdir
-%patch1 -p1 -b .1path
-%patch2 -p1 -b .2ldflags
-#%patch3 -p1 -b .3homepage
-%patch4 -p1 -b .4pcre
-%patch5 -p1 -b .5optflags
-%patch6 -p1 -b .6lnamap6
-%patch7 -p1 -b .openssl
+%patch -P0 -p1 -b .0destdir
+%patch -P1 -p1 -b .1path
+%patch -P2 -p1 -b .2ldflags
+#%%patch -P3 -p1 -b .3homepage
+%patch -P4 -p1 -b .4pcre
+%patch -P5 -p1 -b .5optflags
+%patch -P6 -p1 -b .6lnamap6
+%patch -P7 -p1 -b .openssl
 
 %build
 #%%configure
